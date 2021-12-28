@@ -49,4 +49,4 @@ let biblioteca = [
 }
 ];
 
-module.exports.biblioteca = biblioteca;
+module.exports = biblioteca;
