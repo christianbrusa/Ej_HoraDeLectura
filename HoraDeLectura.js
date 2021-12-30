@@ -12,14 +12,22 @@ console.log("El promedio de paginas de nuestra biblioteca es de: " + sumaTotal);
 2) Es una lecturaObligatoria si:
    autor: "Stephen King" || titulo: "Eragon" || titulo: "Fundación"
 */
-function lecturaObligatoria(){
+function eslecturaObligatoria() {
+   let filtro = _.filter(datos, function (x) {
+    if (
+      x.autor === "Stephen King" ||
+      x.titulo === "Eragon" ||
+      x.titulo === "Fundación"
+    ) {
+      return x;
+    }
+  });
+  return filtro;
+  }
 
-let filtro = _.find(datos, x => {
-	if(x.autor === "Stephen King" || x.titulo === "Eragon" || x.titulo === "Fundación")
-	{
-		console.log("Esta es una lectura obligatoria:", x);
-	}
-})
+function lecturaObligatoria() {
+  console.log("Las lecturas obligatorias son: ");
+  return eslecturaObligatoria();
 }
 lecturaObligatoria();
 
