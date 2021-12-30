@@ -61,8 +61,9 @@ nombreDeLaBiblioteca();
 5) Será ligera si todas sus lecturas tienen <= 40 paginas.
 */
 function bibliotecaLigera(){
-	let filtroPaginas = datos.some(g => g.paginas <= 40);
-	console.log("Biblioteca ligera:", filtroPaginas);
+	let filtroPaginas = _.every(datos, g => g.paginas <= 40);
+	console.log('Biblioteca ligera:');
+  	return filtroPaginas;
 }
 bibliotecaLigera();
 
