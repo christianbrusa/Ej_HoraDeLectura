@@ -29,13 +29,13 @@ lecturaObligatoria();
 3) La biblioteca es fantasiosa si:
    autor: "Christopher Paolini" || autor: "Neil Gaiman"
 */
-function esAutorFantasioso(){
-  return _.some(biblioteca, e => e.autor === "Neil Gaiman" || e.autor === "Christopher Paolini");
+function esAutorFantasioso(libro) {
+    return libro.autor === "Neil Gaiman" || libro.autor === "Christopher Paolini";
 }
 
 function esFantasiosa() {
-  console.log("Biblioteca fantasiosa: ");
-  return esAutorFantasioso();
+    console.log("Biblioteca fantasiosa: ");
+    return _.some(biblioteca, esAutorFantasioso);
 }
 esFantasiosa();
 
