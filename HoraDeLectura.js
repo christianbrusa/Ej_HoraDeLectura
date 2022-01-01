@@ -43,9 +43,13 @@ esFantasiosa();
 /*
 4) Será el nombre de todos los títulos juntos, sacándole las vocales.
 */
-function nombreDeLaBiblioteca(){
-  let concatenarTitulos = _.map(biblioteca, r => r.titulo).join("").replace(/[aáAÁeéEÉiíIÍoOóÓuúUÚ\s]/g, '');
-  console.log("El nombre de la biblioteca sin vocales es: ", concatenarTitulos);
+function sinVocales(libro){
+  return libro.titulo.replace(/[aáAÁeéEÉiíIÍoOóÓuúUÚ\s]/g, '');
+}
+
+function nombreDeLaBiblioteca() {
+  console.log("El nombre de la biblioteca sin vocales es: ");
+  return _.map(biblioteca, sinVocales).join(",");
 }
 nombreDeLaBiblioteca();
 
