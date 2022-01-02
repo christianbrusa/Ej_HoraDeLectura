@@ -4,8 +4,12 @@ const biblioteca = require("./biblioteca");
 /*
 1) Sumar las hojas de todos los libros y dividir ese numero por la cantidad de titulos.
 */
-let sumaTotal = _.sumBy(biblioteca, function(suma) { return suma.paginas/biblioteca.length; })
-console.log("El promedio de paginas de nuestra biblioteca es de: " + sumaTotal);
+function promedioDePaginas(){
+let pags = biblioteca.map(({paginas}) => paginas);
+  console.log("El promedio de paginas es: ");
+  return _.sumBy(pags)/pags.length;
+}
+promedioDePaginas();
 
 
 /*
