@@ -25,27 +25,31 @@ let biblioteca = [
 },
 {
 	titulo: "Eragon",
-	autor: "Neil Gaiman",
-	nacionalidadAutor: "Británico",
-	paginas: 544
+	autor: " Christopher Paolini",
+	nacionalidadAutor: "Estadounidense",
+	paginas: 544,
+  	saga: "Eragon"
 },
 {
 	titulo: "Eldest",
-	autor: "Neil Gaiman",
-	nacionalidadAutor: "Británico",
-	paginas: 704
+	autor: " Christopher Paolini",
+	nacionalidadAutor: "Estadounidense",
+	paginas: 704,
+  	saga: "Eragon"
 },
 {
 	titulo: "Brisignr",
-	autor: "Neil Gaiman",
-	nacionalidadAutor: "Británico",
-	paginas: 700
+	autor: " Christopher Paolini",
+	nacionalidadAutor: "Estadounidense",
+	paginas: 700,
+  	saga: "Eragon"
 },
 {
 	titulo: "Legado",
-	autor: "Neil Gaiman",
-	nacionalidadAutor: "Británico",
-	paginas: 811
+	autor: " Christopher Paolini",
+	nacionalidadAutor: "Estadounidense",
+	paginas: 811,
+  	saga: "Eragon"
 }
 ];
 
