@@ -66,9 +66,8 @@ function esLibroLigero(libro){
 }
 
 function bibliotecaLigera() {
-    let filtroPaginas = _.every(biblioteca, esLibroLigero);
-    console.log('Biblioteca ligera:');
-    return filtroPaginas;
+	console.log('Biblioteca ligera:');
+    return _.every(biblioteca, esLibroLigero);
 }
 bibliotecaLigera();
 
