@@ -18,7 +18,7 @@ promedioDePaginas();
 */
 function esLibroObligatorio(libro) {
   return libro.autor === "Stephen King" || 
-         libro.titulo === "Eragon" || 
+         libro.saga === "Eragon" || 
          libro.titulo === "Fundación";
 }
 
