@@ -6,10 +6,8 @@ const biblioteca = require("./biblioteca");
 */
 function promedioDePaginas(){
 let pags = biblioteca.map(({paginas}) => paginas);
-  console.log("El promedio de paginas es: ");
   return _.sumBy(pags)/pags.length;
 }
-promedioDePaginas();
 
 
 /*
@@ -23,10 +21,8 @@ function esLibroObligatorio(libro) {
 }
 
 function lecturaObligatoria() {
-  console.log("Las lecturas obligatorias son: ");
   return _.filter(biblioteca, esLibroObligatorio);
 }
-lecturaObligatoria();
 
 
 /*
@@ -38,10 +34,8 @@ function esAutorFantasioso(libro) {
 }
 
 function esFantasiosa() {
-    console.log("Biblioteca fantasiosa: ");
     return _.some(biblioteca, esAutorFantasioso);
 }
-esFantasiosa();
 
 
 /*
@@ -52,10 +46,8 @@ function sinVocales(libro){
 }
 
 function nombreDeLaBiblioteca() {
-  console.log("El nombre de la biblioteca sin vocales es: ");
   return _.map(biblioteca, sinVocales).join(",");
 }
-nombreDeLaBiblioteca();
 
 
 /*
@@ -66,11 +58,8 @@ function esLibroLigero(libro){
 }
 
 function bibliotecaLigera() {
-	console.log('Biblioteca ligera:');
     return _.every(biblioteca, esLibroLigero);
 }
-bibliotecaLigera();
-
 
 /*
 6) Obtener el genero del libro:
@@ -79,5 +68,22 @@ bibliotecaLigera();
 - Cómics -> paginas < 40
 - No calificado -> TODO EL RESTO!
 */
-function genero(){}
-genero();
+function genero(libro) {
+  let genero = "";
+  if(libro.autor === "Stephen King"){
+    genero = "Terror";
+  }
+  else if(libro.nacionalidadAutor === "Japonés"){
+    genero = "Manga";
+  }
+  else if(libro.paginas < 40){
+    genero = "Cómics";
+  }
+  else{
+    genero = "No calificado";
+  }
+  return genero;
+}
+
+
+module.exports = {promedioDePaginas, lecturaObligatoria, esFantasiosa, nombreDeLaBiblioteca,bibliotecaLigera, genero};
