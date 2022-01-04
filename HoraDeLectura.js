@@ -41,12 +41,12 @@ function esFantasiosa() {
 /*
 4) Será el nombre de todos los títulos juntos, sacándole las vocales.
 */
-function sinVocales(libro){
+function tituloSinVocales(libro){
   return libro.titulo.replace(/[aáAÁeéEÉiíIÍoOóÓuúUÚ\s]/g, '');
 }
 
 function nombreDeLaBiblioteca() {
-  return _.map(biblioteca, sinVocales).join(",");
+  return _.map(biblioteca, tituloSinVocales).join(",");
 }
 
 
