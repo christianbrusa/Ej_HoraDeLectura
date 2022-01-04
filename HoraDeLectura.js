@@ -69,20 +69,19 @@ function bibliotecaLigera() {
 - No calificado -> TODO EL RESTO!
 */
 function genero(libro) {
-  let genero = "";
+
   if(libro.autor === "Stephen King"){
-    genero = "Terror";
+    return "Terror";
   }
   else if(libro.nacionalidadAutor === "Japonés"){
-    genero = "Manga";
+    return "Manga";
   }
   else if(libro.paginas < 40){
-    genero = "Cómics";
+    return "Cómics";
   }
   else{
-    genero = "No calificado";
+    return "No calificado";
   }
-  return genero;
 }
 
 
