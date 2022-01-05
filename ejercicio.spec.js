@@ -1,4 +1,5 @@
 const {promedioDePaginas, lecturaObligatoria, esFantasiosa, nombreDeLaBiblioteca, bibliotecaLigera, genero} = require("./HoraDeLectura");
+const {elVisitante, shingekiNoKyojin, fundación, sandman, eragon, eldest, brisignr, legado} = require("./libros");
 require("should");
 
 describe("Test", () => {
@@ -7,57 +8,19 @@ describe("Test", () => {
     });
 
     describe("Genero", () => {
-        it("Deberia devolver el genero para el titulo (El visitante)", () => genero({
-			titulo: "El visitante",
-			autor: "Stephen King",
-			nacionalidadAutor: "Estadounidense",
-			paginas: 592
-		}).should.be.eql("Terror") );
+        it("Deberia devolver el genero para el titulo (El visitante)", () => genero(elVisitante).should.be.eql("Terror") );
     });
 
     describe("lecturaObligatoria", () => {
         it("Deberia devolver las lecturas obligatorias", () => lecturaObligatoria().should.be.eql([
-			  {
-			    titulo: 'El visitante',
-			    autor: 'Stephen King',
-			    nacionalidadAutor: 'Estadounidense',
-			    paginas: 592
-			  },
-			  {
-			    titulo: 'Fundación',
-			    autor: 'Isaac Asimov',
-			    nacionalidadAutor: 'Estadounidense',
-			    paginas: 230
-			  },
-			  {
-			    titulo: 'Eragon',
-			    autor: ' Christopher Paolini',
-			    nacionalidadAutor: 'Estadounidense',
-			    paginas: 544,
-			    saga: 'Eragon'
-			  },
-			  {
-			    titulo: 'Eldest',
-			    autor: ' Christopher Paolini',
-			    nacionalidadAutor: 'Estadounidense',
-			    paginas: 704,
-			    saga: 'Eragon'
-			  },
-			  {
-			    titulo: 'Brisignr',
-			    autor: ' Christopher Paolini',
-			    nacionalidadAutor: 'Estadounidense',
-			    paginas: 700,
-			    saga: 'Eragon'
-			  },
-			  {
-			    titulo: 'Legado',
-			    autor: ' Christopher Paolini',
-			    nacionalidadAutor: 'Estadounidense',
-			    paginas: 811,
-			    saga: 'Eragon'
-			  }
-        ])  );
+			  elVisitante,
+			  fundación,
+			  eragon,
+			  eldest,
+			  brisignr,
+			  legado
+			])
+        );
     });
 
     describe("esFantasiosa", () => {
