@@ -4,9 +4,16 @@ const biblioteca = require("./biblioteca");
 /*
 1) Sumar las hojas de todos los libros y dividir ese numero por la cantidad de titulos.
 */
+function cantidadDePaginas(libro){
+  return libro.paginas;
+}
+
+function cantidadDeLibros(){
+  return biblioteca.length;
+}
+
 function promedioDePaginas(){
-let pags = biblioteca.map(({paginas}) => paginas);
-  return _.sumBy(pags)/pags.length;
+  return _.sumBy(biblioteca, cantidadDePaginas)/cantidadDeLibros();
 }
 
 
